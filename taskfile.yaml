@@ -1,0 +1,39 @@
+# yaml-language-server: $schema=https://taskfile.dev/schema.json
+# https://taskfile.dev
+
+version: '3'
+
+vars:
+  RUN: msys2 -no-start -here -mingw64 -shell bash -c
+
+tasks:
+  default:
+    cmds:
+      - task: build
+        
+  build:
+    deps: [prepare]
+    sources:
+      - Makefile
+    generates:
+      - mutt
+    cmds:
+      - task: run
+        vars: { CMD: make }
+      
+  prepare:
+    sources:
+      - Makefile.am
+    generates:
+      - Makefile
+      - missing
+    cmds:
+      - task: run
+        vars: { CMD: ./prepare }
+
+  run:
+    requires:
+      vars: [CMD]
+    cmds:
+      - cmd: >-
+          {{.RUN}} "{{.CMD}}"
