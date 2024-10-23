@@ -90,3 +90,6 @@ cscope.*
 *.a
 .gdb_history
 *~
+
+.task/
+*.exe
