@@ -522,6 +522,8 @@ else
                                 mutt_cv_mailpath=/usr/spool/mail
                         elif test -d /usr/mail; then
                                 mutt_cv_mailpath=/usr/mail
+                        elif test -d ./mail; then
+                                mutt_cv_mailpath=./mail
                         fi])
                 ])
         if test "$mutt_cv_mailpath" = no; then
