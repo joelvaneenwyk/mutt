@@ -94,6 +94,8 @@ cscope.*
 .task/
 *.exe
 
+.git/
+autom4te.cache/
 confdefs.h
 conftest.c
 conftest.err
