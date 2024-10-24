@@ -4,7 +4,7 @@
 version: '3'
 
 vars:
-  RUN: msys2 -no-start -here -mingw64 -shell bash -c
+  RUN: msys2 -no-start -here -msys2 -shell bash -c
 
 tasks:
   default:
@@ -37,7 +37,7 @@ tasks:
       - task: run
         vars:
           CMD: |
-            pacman -S --needed --yes \
+            pacman -S --needed \
               base-devel msys2-devel \
               libgpgme-devel libsasl-devel libgdbm-devel \
               ncurses-devel libgnutls-devel libidn-devel \
