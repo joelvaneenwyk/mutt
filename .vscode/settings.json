@@ -1,0 +1,7 @@
+{
+    "files.associations": {
+        "build-release": "shellscript",
+        "prepare": "shellscript",
+        "install-sh": "shellscript"
+    }
+}
