@@ -98,3 +98,4 @@ confdefs.h
 conftest.c
 conftest.err
 conftest.val
+conftest.mk
