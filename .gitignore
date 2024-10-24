@@ -93,3 +93,8 @@ cscope.*
 
 .task/
 *.exe
+
+confdefs.h
+conftest.c
+conftest.err
+conftest.val

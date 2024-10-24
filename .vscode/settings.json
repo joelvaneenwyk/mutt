@@ -2,6 +2,10 @@
     "files.associations": {
         "build-release": "shellscript",
         "prepare": "shellscript",
-        "install-sh": "shellscript"
+        "gen_defs": "shellscript",
+        "install-sh": "shellscript",
+        "muttbug": "shellscript",
+        "*.sh.in": "shellscript",
+        "*.sample": "shellscript"
     }
 }
